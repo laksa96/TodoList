@@ -1,0 +1,15 @@
+.app {
+    background: linear-gradient(180deg, #FF0000 0%, #FC9E00 100%);
+}
+
+.todo {
+    max-width: 500px;
+}
+.todo--text {
+    max-width: 370px;
+    overflow-wrap: break-word;
+    width: 100%;
+}
+.todo--completed .todo--text {
+    text-decoration: line-through;
+}
