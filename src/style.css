@@ -10,6 +10,14 @@
     overflow-wrap: break-word;
     width: 100%;
 }
+.todo--check {
+    height: 25px;
+    width: 25px;
+    border: 2px solid #FC9E00 !important;
+}
+.todo--check:focus {
+    box-shadow: none !important;
+}
 .todo--completed .todo--text {
     text-decoration: line-through;
 }

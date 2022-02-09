@@ -8,9 +8,11 @@ const Todo = (props) => {
         return (
             <div className={`todo d-flex align-items-center p-2 mt-2 bg-light rounded ${item.completed && 'todo--completed opacity-75'}`} key={item.id}>
                 <div className='todo--text me-auto'>{item.text}</div>
-                <div className='d-flex align-items-center justify-content-center'>
-                    <button onClick={() => props.handleComplete(item.id)} className='btn p-2'><img src='images/check-icon.svg' alt='Check' /></button>
-                    <button onClick={() => props.handleRemove(item.id)} className='btn p-2 ms-1'><img src='images/delete-icon.svg' alt='Delete' /></button>
+                <div className='d-flex align-items-center justify-content-center p-2'>
+                    <button onClick={() => props.handleComplete(item.id)} className='todo--check d-flex justify-content-center align-items-center btn'>
+                        {item.completed && <img src='images/check-icon.svg' alt='Check' />}
+                    </button>
+                    <button onClick={() => props.handleRemove(item.id)} className='btn p-0 ms-3'><img src='images/delete-icon.svg' alt='Delete' /></button>
                 </div>
             </div>
         )
